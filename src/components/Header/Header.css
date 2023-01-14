@@ -1,0 +1,14 @@
+.container-header {
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 5em;
+  margin: 0;
+}
+
+.container-header p {
+  font-size: 1.5em;
+  margin: 0;
+}

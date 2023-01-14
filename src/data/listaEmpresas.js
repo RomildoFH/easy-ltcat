@@ -1,18 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import AppContext from '../context/AppContext';
-import { useNavigate } from 'react-router-dom';
-import './Ltcat.css';
-import Footer from '../components/Footer/Footer';
-
-function Ltcat() {
-
-  const {
-    isLoading,
-    setIsLoading,
-    // empresa,
-  } = useContext(AppContext);
-
-  const empresa = {
+export const listaEmpresas = [
+  {
     nome: 'EXPRESSO ETIQUETAS E BOBINAS LTDA-ME',
     nome_fantazia: 'EXPRESSO ETIQUETAS E BOBINAS',
     endereco: 'rua projetada, s/n, lote 08, quadra 103, Dom Helder Câmara, Garanhuns - PE',
@@ -75,22 +62,4 @@ function Ltcat() {
     ],
     metodologia: [''],
   }
-
-  useEffect = (() => {
-
-  }, []);
-
-  return (
-    isLoading ? <p>Loading...</p> : (
-      <main className="page-container">
-        <section className="cover-page">
-          <h2>{ empresa.nome_fantazia }</h2>
-          <p>{ empresa.endereco }</p>
-        </section>
-        <Footer />
-      </main>
-    )
-  )
-}
-
-export default Ltcat;
+];

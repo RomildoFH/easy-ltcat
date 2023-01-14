@@ -17,6 +17,7 @@ div#root {
   min-height: max-content;
   background-color: white;
   max-width: 794px;
+  min-height: 1123px;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
@@ -33,11 +34,19 @@ div#root {
   padding: 0 4px;
 }
 
-@media screen and (max-width: 999px) {
-  body {
-  font-size: 16px;
+@media print {
+  div.container-footer {
+    position: fixed;
+    bottom: 0;
   }
-  .items-section button {
-    font-size: 16px;
+  div.container-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .page-container {
+    margin-top: 100px;
   }
 }

@@ -1,17 +1,21 @@
-import React, { useContext } from 'react';
-import AppContext from '../context/AppContext'
+import React, { useContext, useState } from 'react';
+import AppContext from '../context/AppContext';
+import { useNavigate } from 'react-router-dom';
+import { listaEmpresas } from '../data/listaEmpresas';
 import './Home.css';
+import Footer from '../components/Footer/Footer';
 
 function Home() {
-
   const {
-    isLoading,
     setIsLoading,
     nomeEmpresa,
     setNomeEmpresa,
     cnpj,
     setCnpj,
+    setEmpresa,
   } = useContext(AppContext);
+
+  const [validation, setValidation] = useState(true);
 
   const handleChange = ({ target }) => {
     const { name, type } = target;
@@ -20,7 +24,7 @@ function Home() {
 
     switch (name) {
       case "nomeEmpresa":
-        setNomeEmpresa(value);
+        setNomeEmpresa(value.toUpperCase());
         break;
       case "cnpj":
         setCnpj(
@@ -35,6 +39,29 @@ function Home() {
     }
   };
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    const result = listaEmpresas.filter((empresa) => {
+      return (empresa.nome === nomeEmpresa && empresa.cnpj === cnpj)
+    });
+
+    switch (result.length) {
+      case 1:
+        setEmpresa(result);
+        setIsLoading(true);
+        navigate('/easy-ltcat/ltcat');
+        break;
+    
+      default:
+        setValidation(false);
+        break;
+    }
+
+    console.log(result);
+    
+  };
+
   return (
     <div className="page-container">
       <form id="search-form">
@@ -46,7 +73,8 @@ function Home() {
             id="input-cnpj"
             placeholder="00.000.000/0001-00"
             name="cnpj"
-            onChange={ handleChange } />
+            onChange={ handleChange }
+            value={ cnpj } />
           <label htmlFor="input-cnpj">CNPJ</label>
         </div>
         <div className="form-floating mb-3">
@@ -56,10 +84,17 @@ function Home() {
             id="input-nome-empresa"
             placeholder="nome da empresa a ser consultada"
             name="nomeEmpresa"
-            onChange={ handleChange } />
+            onChange={ handleChange }
+            value={ nomeEmpresa } />
           <label htmlFor="input-nome-empresa">Nome da empresa</label>
         </div>
+        <button type="button" className="btn btn-primary btn-lg" onClick={ handleClick }>Procurar</button>
+        {
+          !validation ? <p id="message-error-01">Desculpe, empresa não encontrada</p> : null
+        }
       </form>
+
+      <Footer />
     </div>
   )
 }

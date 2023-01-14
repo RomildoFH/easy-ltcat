@@ -8,7 +8,7 @@ function Routers() {
   return (
     <Routes>
       <Route exact path="/easy-ltcat" element={ <Home /> } />
-      <Route path="/easy-ltcat/sobre" element={ <Ltcat /> } />
+      <Route path="/easy-ltcat/ltcat" element={ <Ltcat /> } />
     </Routes>
   )
 }
