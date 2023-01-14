@@ -1,13 +1,40 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 20px;
+}
+
+div#root {
+  height: 100%; /* remove this line to see div.app is no more 100% height */
+  min-height: max-content;
+  /* background-color: indigo; */
+  max-width: 794px;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-container {
+  flex-grow: 1;
+  padding: 0 4px;
+}
+
+@media screen and (max-width: 999px) {
+  body {
+  font-size: 16px;
+  }
+  .items-section button {
+    font-size: 16px;
+  }
 }

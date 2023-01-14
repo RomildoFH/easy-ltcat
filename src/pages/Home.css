@@ -1,0 +1,7 @@
+#search-form {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px;
+}
+
