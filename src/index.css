@@ -8,15 +8,18 @@ html {
 
 body {
   height: 100%;
-  font-size: 20px;
+  font-size: 12px;
+  background-color: gray;
 }
 
 div#root {
   height: 100%; /* remove this line to see div.app is no more 100% height */
   min-height: max-content;
-  /* background-color: indigo; */
+  background-color: white;
   max-width: 794px;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App {

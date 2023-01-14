@@ -39,12 +39,26 @@ function Home() {
     <div className="page-container">
       <form id="search-form">
         <p>Bem vindo(a), por favor, insira o CNPJ da empresa da qual deseja visualizar o LTCAT</p>
-        <label>CNPJ
-          <input type="text" />
-        </label>
-        <label>Nome da Empresa
-          <input type="text" />
-        </label>
+        <div className="form-floating mb-3">
+          <input
+            type="text"
+            className="form-control"
+            id="input-cnpj"
+            placeholder="00.000.000/0001-00"
+            name="cnpj"
+            onChange={ handleChange } />
+          <label htmlFor="input-cnpj">CNPJ</label>
+        </div>
+        <div className="form-floating mb-3">
+          <input
+            type="text"
+            className="form-control"
+            id="input-nome-empresa"
+            placeholder="nome da empresa a ser consultada"
+            name="nomeEmpresa"
+            onChange={ handleChange } />
+          <label htmlFor="input-nome-empresa">Nome da empresa</label>
+        </div>
       </form>
     </div>
   )
