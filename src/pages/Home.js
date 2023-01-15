@@ -12,6 +12,8 @@ function Home() {
     cnpj,
     setCnpj,
     setEmpresa,
+    laudo,
+    setLaudo,
   } = useContext(AppContext);
 
   const [validation, setValidation] = useState(true);
@@ -33,6 +35,9 @@ function Home() {
           )
         );
         break;
+      case "laudo":
+        setLaudo(value);
+        break;
       default:
         break;
     }
@@ -48,7 +53,7 @@ function Home() {
     switch (result.length) {
       case 1:
         setEmpresa(result[0]);
-        navigate('/easy-ltcat/ltcat');  
+        navigate(`/easy-ltcat/${laudo}`);  
         break;
     
       default:
@@ -87,6 +92,27 @@ function Home() {
             value={ nomeEmpresa } />
           <label htmlFor="input-nome-empresa">Nome da empresa</label>
         </div>
+        <fieldset className="row mb-3">
+          <legend className="col-form-label col-sm-2 pt-0">Laudo</legend>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="laudo" id="laudo1" value="ltcat" onChange={handleChange} checked={laudo === 'ltcat'} />
+            <label className="form-check-label" htmlFor="laudo1">
+              LTCAT
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" type="radio" name="laudo" id="laudo2" value="pgr" onChange={handleChange} checked={laudo === 'pgr'} />
+            <label className="form-check-label" htmlFor="laudo2">
+              PGR
+            </label>
+          </div>
+          {/* <div className="form-check">
+            <input className="form-check-input" type="radio" name="laudo" id="laudo3" value="pcmso" onChange={handleChange} checked={laudo === 'pcmso'} />
+            <label className="form-check-label" htmlFor="laudo3">
+              PCMSO
+            </label>
+          </div> */}
+        </fieldset>
         <button type="button" className="btn btn-primary btn-lg" onClick={ handleClick }>Procurar</button>
         {
           !validation ? <p id="message-error-01">Desculpe, o CNPJ ou Nome de Empresa não consta em nosso sistema</p> : null

@@ -12,3 +12,7 @@
 .form-floating {
   width: 60%;
 }
+
+.form-check {
+  text-align: left;
+}

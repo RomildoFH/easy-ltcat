@@ -81,6 +81,77 @@ export const listaEmpresas = [
         epc: ['Não há equipamento de proteção coletiva'],
         tempo_exposicao: 'Ausência de Agentes Nocivos',
         exposicao: 'Não se expõem a nenhum agente físico, químico, biológico ou ergonômico, em níveis que venham a causar danos a sua saúde',
+      },
+      {
+        nome: 'Auxiliar administrativo',
+        atividades: [
+          'Realiza trabalhos de contabilidade',
+          'Organizar o setor de trabalho',
+          'Organizar documentações',
+          'Realiza substituição de cartucho de tinta em impressora do escritório',
+        ],
+        agentes_nocivos: [
+          {
+            'Risco Físico': [
+              {
+                'ruido': {
+                  descricao: 'Dentro dos limites de tolerância',
+                  quantidade: '65dB(A)',
+                },
+                'calor': {
+                  descricao: 'Dentro dos limites de tolerância',
+                  quantidade: '',
+                },
+              }
+            ]
+          },
+          {
+            'Risco Químico': [
+              {
+                'poeira': {
+                  descricao: 'Não foi constatada a presença',
+                  quantidade: '0 ppm',
+                },
+                'corrosivos': {
+                  descricao: 'Não foi constatada a presença',
+                  quantidade: '0 ppm',
+                },
+                'inflamáveis': {
+                  descricao: 'Não foi constatada a presença',
+                  quantidade: '0 ppm',
+                },
+                'óleos e graxas': {
+                  descricao: 'Não foi constatada a presença',
+                  quantidade: '0 ppm',
+                }
+                ,
+                'tintas e vernizes': {
+                  descricao: 'Não foi constatada a presença',
+                  quantidade: '0 ppm',
+                }
+              }
+            ]
+          },
+          {
+            'Risco Biológico': [
+              {
+                'vírus': {
+                  descricao: 'Não existe',
+                  quantidade: 'NA'
+                },
+                'bactérias': {
+                  descricao: 'Não existe',
+                  quantidade: 'NA'
+                }
+              }
+            ]
+          }
+        ],
+        medidas_administrativas: ['Revesamento de atividades'],
+        epi: ['calçado de segurança'],
+        epc: ['Não há equipamento de proteção coletiva'],
+        tempo_exposicao: 'Ausência de Agentes Nocivos',
+        exposicao: 'Não se expõem a nenhum agente físico, químico, biológico ou ergonômico, em níveis que venham a causar danos a sua saúde',
       }
     ],
     equipamentos: [
@@ -96,7 +167,7 @@ export const listaEmpresas = [
         marca: 'Quest',
         modelo: '',
         procedencia: '',
-        metodo: 'A medição foi realizada com o instrumento colocado na altura do funcionário, e a 01 (um) metro de distância da fonte de calor.'
+        metodo: 'A medição foi realizada com o instrumento colocado na altura do funcionário, e a 01 (um) metro do posto de trabalho.'
       },
     ],
     metodologia: [''],
