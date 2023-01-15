@@ -1,13 +1,20 @@
 .container-footer {
-  align-items: baseline;
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  padding: 12px 12px;
+  padding: 12px 20px;
   margin-bottom: 5px;
-  position: fixed;
-  bottom: 0;
 }
 
 .container-footer p {
   margin-bottom: 0;
+}
+
+@media print {
+  .container-footer {
+    position: fixed;
+    right: 20px;
+    text-align: right;
+    bottom: 0;
+  }
 }

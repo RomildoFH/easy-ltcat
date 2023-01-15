@@ -2,7 +2,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 280px);
+}
+
+.cover-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+.cover-andress {
+  text-transform: uppercase;
+}
+
+.cover-functions {
+  font-weight: bold;
 }
 
 .lista-funcoes-nomes {
@@ -17,6 +31,7 @@
 .article-container{
   text-align: justify;
   padding: 0 20px;
+  margin-bottom: 30px;
 }
 
 .article-title {
@@ -27,4 +42,30 @@
 
 .article-paragraph {
   text-indent: 20px;
+  margin: 0;
+}
+
+.assinaturas-container {
+  display: flex;
+  justify-content: center;
+}
+
+.assinaturas-container p {
+  margin: 0;
+}
+
+.assinaturas-container p:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.campo-assinatura {
+  padding: 0 30px;
+}
+
+.campo-assinatura p:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.footer-space {
+  height: 115px;
 }

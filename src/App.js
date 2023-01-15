@@ -5,6 +5,7 @@ import { useContext } from 'react';
 // import Header from './components/Header/Header';
 import Routers from './Routes.js'
 import './App.css';
+import Loading from './components/Loading';
 
 function App() {
   const { isLoading, setIsLoading } = useContext(AppContext);
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       {isLoading ? (
-        <p>Loading</p>
+        <Loading />
       ) : (
         <Router>
           <Routers />

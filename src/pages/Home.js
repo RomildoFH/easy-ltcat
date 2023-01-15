@@ -3,12 +3,10 @@ import AppContext from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import { listaEmpresas } from '../data/listaEmpresas';
 import './Home.css';
-import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 
 function Home() {
   const {
-    setIsLoading,
     nomeEmpresa,
     setNomeEmpresa,
     cnpj,
@@ -49,9 +47,8 @@ function Home() {
 
     switch (result.length) {
       case 1:
-        setEmpresa(result);
-        setIsLoading(true);
-        navigate('/easy-ltcat/ltcat');
+        setEmpresa(result[0]);
+        navigate('/easy-ltcat/ltcat');  
         break;
     
       default:
@@ -92,11 +89,9 @@ function Home() {
         </div>
         <button type="button" className="btn btn-primary btn-lg" onClick={ handleClick }>Procurar</button>
         {
-          !validation ? <p id="message-error-01">Desculpe, empresa não encontrada</p> : null
+          !validation ? <p id="message-error-01">Desculpe, o CNPJ ou Nome de Empresa não consta em nosso sistema</p> : null
         }
       </form>
-
-      <Footer />
     </div>
   )
 }

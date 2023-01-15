@@ -34,32 +34,8 @@ div#root {
   margin: 0 21px 30px 21px;
 }
 
-.container-footer {
-  position: absolute;
-  right:0;
-  float: right;
-  visibility: hidden;
-}
-
 @media print {
   body {
     background-color: white;
-  }
-  /* div.container-footer {
-    position: fixed;
-    bottom: 0;
-  } */
-  /* header.container-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-  } */
-
-  /* .page-container {
-    margin-top: 100px;
-  } */
-  .container-footer {
-    visibility: visible;
   }
 }
