@@ -219,9 +219,10 @@ function Ltcat() {
               <section className="conclusao">
                 <article className="article-container">
                   <h3 className="article-title">6. Conclusão</h3>
-                  <p className="article-paragraph">{`Para avaliar a exposição ao nível de pressão sonora, utilizamos ${empresa.equipamentos[0].nome}, marca ${empresa.equipamentos[0].marca}, modelo ${empresa.equipamentos[0].modelo}, procedência ${empresa.equipamentos[0].procedencia}. ${empresa.equipamentos[0].metodo}`}</p>
+                  <p className="article-paragraph">{empresa.conclusao}</p>
                 </article>
-                <p>Afirmo que toda a informação aqui prestada é verdadeira</p>
+                <p>Afirmo que toda a informação aqui prestada é verdadeira.</p>
+                <p>{empresa.cidade}, {empresa.data_conclusao}</p>
                 <div className="assinaturas-container">
                   <div className="campo-assinatura">
                     <p>Responsável técnico</p>
