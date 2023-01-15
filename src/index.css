@@ -9,7 +9,7 @@ html {
 body {
   height: 100%;
   font-size: 12px;
-  background-color: gray;
+  background-color: white;
 }
 
 div#root {
@@ -31,22 +31,35 @@ div#root {
 
 .page-container {
   flex-grow: 1;
-  padding: 0 4px;
+  margin: 0 21px 30px 21px;
+}
+
+.container-footer {
+  position: absolute;
+  right:0;
+  float: right;
+  visibility: hidden;
 }
 
 @media print {
-  div.container-footer {
+  body {
+    background-color: white;
+  }
+  /* div.container-footer {
     position: fixed;
     bottom: 0;
-  }
-  div.container-header {
+  } */
+  /* header.container-header {
     position: fixed;
     top: 0;
     width: 100%;
     text-align: center;
-  }
+  } */
 
-  .page-container {
+  /* .page-container {
     margin-top: 100px;
+  } */
+  .container-footer {
+    visibility: visible;
   }
 }

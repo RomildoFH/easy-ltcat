@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { listaEmpresas } from '../data/listaEmpresas';
 import './Home.css';
 import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
 
 function Home() {
   const {
@@ -64,6 +65,7 @@ function Home() {
 
   return (
     <div className="page-container">
+      <Header />
       <form id="search-form">
         <p>Bem vindo(a), por favor, insira o CNPJ da empresa da qual deseja visualizar o LTCAT</p>
         <div className="form-floating mb-3">

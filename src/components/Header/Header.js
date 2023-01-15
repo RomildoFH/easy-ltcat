@@ -3,10 +3,10 @@ import './Header.css';
 
 function Header() {
   return (
-    <div className="container-header">
+    <header className="container-header">
       <h1>LTCAT</h1>
       <p>Laudo Técnico das Condições Ambientes de Trabalho</p>
-    </div>
+    </header>
   )
 }
 

@@ -1,0 +1,30 @@
+.cover-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: calc(100vh - 150px);
+}
+
+.lista-funcoes-nomes {
+  list-style: none;
+  list-style-position: inside;
+}
+
+.lista-funcoes-nomes li {
+  margin-left: -32px;
+}
+
+.article-container{
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.article-title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.article-paragraph {
+  text-indent: 20px;
+}
