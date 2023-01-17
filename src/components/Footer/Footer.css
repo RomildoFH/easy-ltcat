@@ -1,20 +1,37 @@
 .container-footer {
   align-items: flex-end;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 12px 20px;
   margin-bottom: 5px;
 }
 
-.container-footer p {
+.container-footer {
   margin-bottom: 0;
+}
+
+.container-footer div p {
+  margin-bottom: 0;
+}
+
+.container-footer div:nth-child(1) {
+  text-align: left;
+}
+
+.container-footer div:nth-child(2) {
+  text-align: right;
 }
 
 @media print {
   .container-footer {
-    position: fixed;
-    right: 20px;
-    text-align: right;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    /* right: 20px;
+    text-align: right; */
+    position: fixed;
+    padding: 12px 20px;
+    width: calc(100% - 20px);
   }
 }

@@ -45,6 +45,11 @@
   margin: 0;
 }
 
+.article-table tbody tr td:nth-child(1) {
+  padding: 5px 20px;
+  width: 200px;
+}
+
 .assinaturas-container {
   display: flex;
   justify-content: center;

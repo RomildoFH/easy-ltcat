@@ -1,13 +1,15 @@
 export const listaEmpresas = [
   {
     nome: 'EXPRESSO ETIQUETAS E BOBINAS LTDA-ME',
-    nome_fantazia: 'EXPRESSO ETIQUETAS E BOBINAS',
+    nome_fantasia: 'EXPRESSO ETIQUETAS E BOBINAS',
     endereco: 'rua projetada, s/n, lote 08, quadra 103, Dom Helder Câmara, Garanhuns - PE',
     cnpj: '38.045.074/0001-17',
     ramo: 'Serviços de pré-impressão',
     data_da_pericia: '22/03/2022',
     horario_inicio: '09:00',
     horario_termino: '12:00',
+    leis_vigentes: `Leis 8.212 e 8.213/91, Decreto 3048/99 e Instrução Normativa INSS/PRES nº 77 de 21/01/2015, alterada em 26/04/2016`,
+    cnaes: ['47.61-0-03 - Comércio varejista de artigos de papelaria', '18.21-1-00 - Serviços de pré-impressão'],
     medicoes: ['pressão sonora', 'exposição ao calor', 'agentes químicos', 'biológicos'],
     escopo_pericia: ['Análise das tarefas executadas', 'Quantificação dos agentes', 'Análise das normas de segurança do trabalho', 'Análise dos sistemas de proteção individual adotados', 'Consulta as normas técnicas'],
     descricao_do_local: 'Área construída em alvenaria, vigas de concreto armado, coberta com telha de fibrocimento, onde estão instaladas as máquinas destinadas à serviço de pré-impressão de etiquetas.',
