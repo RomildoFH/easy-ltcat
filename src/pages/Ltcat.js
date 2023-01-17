@@ -73,7 +73,7 @@ function Ltcat() {
             <td>
               <section className="cover-page">
                 <div>
-                  <h2 className="cover-title">{empresa.nome_fantazia}</h2>
+                  <h2 className="cover-title">{empresa.nome_fantasia}</h2>
                   <p className="cover-andress">{empresa.endereco}</p>
                 </div>
                 <div className="cover-functions">
