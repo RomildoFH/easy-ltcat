@@ -74,3 +74,13 @@
 .footer-space {
   height: 115px;
 }
+
+.btn-warning {
+  margin: 5px;
+}
+
+@media print {
+  .btn-warning {
+    visibility: hidden;
+  }
+}

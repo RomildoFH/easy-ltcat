@@ -4,6 +4,7 @@ import './Ltcat.css';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Loading from '../components/Loading';
+import { useNavigate } from 'react-router-dom';
 
 function Ltcat() {
 
@@ -31,12 +32,34 @@ function Ltcat() {
       }
     }
     return string;
-  }  
+  }
+
+  const navegate = useNavigate();
+
+  const handleClick = ({target}) => {
+
+    const { name } = target
+
+    switch (name) {
+      case 'home':
+        navegate('/easy-ltcat')
+        break;
+      case 'print':
+        window.print();
+        break;
+      default:
+        break;
+    }
+  }
 
   return isLoading ? (
     <Loading />
   ) : (
     <div className="page-container">
+      <div>
+        <button name="home" class="btn btn-warning" onClick={handleClick}>Home</button>
+        <button name="print" class="btn btn-warning" onClick={handleClick}>Imprimir</button>
+      </div>
       <table className="page-container">
         <thead>
           <tr>
