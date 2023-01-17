@@ -2,7 +2,7 @@ export const listaEmpresas = [
   {
     nome: 'EXPRESSO ETIQUETAS E BOBINAS LTDA-ME',
     nome_fantasia: 'EXPRESSO ETIQUETAS E BOBINAS',
-    endereco: 'rua projetada, s/n, lote 08, quadra 103, Dom Helder Câmara, Garanhuns - PE',
+    endereco: 'Rua projetada, s/n, lote 08, quadra 103, Dom Helder Câmara, Garanhuns - PE',
     cnpj: '38.045.074/0001-17',
     ramo: 'Serviços de pré-impressão',
     data_da_pericia: '22/03/2022',
@@ -10,6 +10,9 @@ export const listaEmpresas = [
     horario_termino: '12:00',
     leis_vigentes: `Leis 8.212 e 8.213/91, Decreto 3048/99 e Instrução Normativa INSS/PRES nº 77 de 21/01/2015, alterada em 26/04/2016`,
     cnaes: ['47.61-0-03 - Comércio varejista de artigos de papelaria', '18.21-1-00 - Serviços de pré-impressão'],
+    grau_de_risco: '3',
+    funcionarios: 6,
+    contato: { nome: 'Antônio', telefone: '(87)9.8135-8668'},
     medicoes: ['pressão sonora', 'exposição ao calor', 'agentes químicos', 'biológicos'],
     escopo_pericia: ['Análise das tarefas executadas', 'Quantificação dos agentes', 'Análise das normas de segurança do trabalho', 'Análise dos sistemas de proteção individual adotados', 'Consulta as normas técnicas'],
     descricao_do_local: 'Área construída em alvenaria, vigas de concreto armado, coberta com telha de fibrocimento, onde estão instaladas as máquinas destinadas à serviço de pré-impressão de etiquetas.',
@@ -28,10 +31,12 @@ export const listaEmpresas = [
                 'ruido': {
                   descricao: 'Dentro dos limites de tolerância',
                   quantidade: '84dB(A)',
+                  limite: '85db(A)',
                 },
                 'calor': {
                   descricao: 'Dentro dos limites de tolerância',
                   quantidade: '',
+                  limite: '',
                 },
               }
             ]
@@ -40,25 +45,30 @@ export const listaEmpresas = [
             'Risco Químico': [
               {
                 'poeira': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 },
                 'corrosivos': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 },
                 'inflamáveis': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 },
                 'óleos e graxas': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 }
                 ,
                 'tintas e vernizes': {
                   descricao: 'Tinta a base de água, não contém riscos para a saúde',
                   quantidade: '0 ppm',
+                  limite: '',
                 }
               }
             ]
@@ -67,12 +77,14 @@ export const listaEmpresas = [
             'Risco Biológico': [
               {
                 'vírus': {
-                  descricao: 'Não existe',
-                  quantidade: 'NA'
+                  descricao: 'Risco Inexistente',
+                  quantidade: 'NA',
+                  limite: 'NA',
                 },
                 'bactérias': {
-                  descricao: 'Não existe',
-                  quantidade: 'NA'
+                  descricao: 'Risco Inexistente',
+                  quantidade: 'NA',
+                  limite: 'NA',
                 }
               }
             ]
@@ -83,6 +95,7 @@ export const listaEmpresas = [
         epc: ['Não há equipamento de proteção coletiva'],
         tempo_exposicao: 'Ausência de Agentes Nocivos',
         exposicao: 'Não se expõem a nenhum agente físico, químico, biológico ou ergonômico, em níveis que venham a causar danos a sua saúde',
+        recomendacoes: ['Manter o uso de protetor auricular', 'Elaborar um cronograma para garantir o correto revesamento', 'Realizar práticas de ginástica laboral'],
       },
       {
         nome: 'Auxiliar administrativo',
@@ -98,11 +111,13 @@ export const listaEmpresas = [
               {
                 'ruido': {
                   descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '65dB(A)',
+                  quantidade: '67,8dB(A)',
+                  limite: '85db(A)',
                 },
                 'calor': {
                   descricao: 'Dentro dos limites de tolerância',
                   quantidade: '',
+                  limite: '',
                 },
               }
             ]
@@ -111,25 +126,30 @@ export const listaEmpresas = [
             'Risco Químico': [
               {
                 'poeira': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 },
                 'corrosivos': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 },
                 'inflamáveis': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 },
                 'óleos e graxas': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Dentro dos limites de tolerância',
                   quantidade: '0 ppm',
+                  limite: '',
                 }
                 ,
                 'tintas e vernizes': {
-                  descricao: 'Não foi constatada a presença',
+                  descricao: 'Tinta a base de água, não contém riscos para a saúde',
                   quantidade: '0 ppm',
+                  limite: '',
                 }
               }
             ]
@@ -138,12 +158,14 @@ export const listaEmpresas = [
             'Risco Biológico': [
               {
                 'vírus': {
-                  descricao: 'Não existe',
-                  quantidade: 'NA'
+                  descricao: 'Risco Inexistente',
+                  quantidade: 'NA',
+                  limite: 'NA',
                 },
                 'bactérias': {
-                  descricao: 'Não existe',
-                  quantidade: 'NA'
+                  descricao: 'Risco Inexistente',
+                  quantidade: 'NA',
+                  limite: 'NA',
                 }
               }
             ]
@@ -154,6 +176,7 @@ export const listaEmpresas = [
         epc: ['Não há equipamento de proteção coletiva'],
         tempo_exposicao: 'Ausência de Agentes Nocivos',
         exposicao: 'Não se expõem a nenhum agente físico, químico, biológico ou ergonômico, em níveis que venham a causar danos a sua saúde',
+        recomendacoes: ['Realizar práticas de ginástica laboral'],
       }
     ],
     equipamentos: [
