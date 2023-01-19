@@ -14,6 +14,8 @@ function Home() {
     setEmpresa,
     laudo,
     setLaudo,
+    versaoDoLaudo,
+    setVersaoDoLaudo,
   } = useContext(AppContext);
 
   const [validation, setValidation] = useState(true);
@@ -38,6 +40,9 @@ function Home() {
       case "laudo":
         setLaudo(value);
         break;
+      case "versaoDoLaudo":
+        setVersaoDoLaudo(value);
+        break;
       default:
         break;
     }
@@ -47,7 +52,7 @@ function Home() {
 
   const handleClick = () => {
     const result = listaEmpresas.filter((empresa) => {
-      return (empresa.nome === nomeEmpresa && empresa.cnpj === cnpj)
+      return (empresa.nome === nomeEmpresa && empresa.cnpj === cnpj && empresa.versao_do_laudo === versaoDoLaudo)
     });
 
     switch (result.length) {
@@ -113,9 +118,20 @@ function Home() {
             </label>
           </div> */}
         </fieldset>
+        <div className="form-floating mb-3">
+          <input
+            type="text"
+            className="form-control"
+            id="input-versao-laudo"
+            placeholder="2022.1"
+            name="versaoDoLaudo"
+            onChange={ handleChange }
+            value={ versaoDoLaudo } />
+          <label htmlFor="input-versao-laudo">Versão do Laudo Ex.: 2022.1</label>
+        </div>
         <button type="button" className="btn btn-primary btn-lg" onClick={ handleClick }>Procurar</button>
         {
-          !validation ? <p id="message-error-01">Desculpe, o CNPJ ou Nome de Empresa não consta em nosso sistema</p> : null
+          !validation ? <p id="message-error-01">Desculpe, o CNPJ, Nome de Empresa ou Versão do Laudo não consta em nosso sistema</p> : null
         }
       </form>
     </div>

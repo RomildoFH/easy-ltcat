@@ -79,6 +79,20 @@
   margin: 5px;
 }
 
+.tabela-exposicao {
+  text-align: center;
+}
+
+.tabela-exposicao th, .tabela-exposicao td{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.memoria-calculo {
+  margin-top: 10px;
+  text-align: left;
+}
+
 @media print {
   .btn-warning {
     visibility: hidden;

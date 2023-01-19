@@ -4,6 +4,7 @@ export const listaEmpresas = [
     nome_fantasia: 'EXPRESSO ETIQUETAS E BOBINAS',
     endereco: 'Rua projetada, s/n, lote 08, quadra 103, Dom Helder Câmara, Garanhuns - PE',
     cnpj: '38.045.074/0001-17',
+    versao_do_laudo: '2022.1',
     ramo: 'Serviços de pré-impressão',
     data_da_pericia: '22/03/2022',
     horario_inicio: '09:00',
@@ -30,8 +31,11 @@ export const listaEmpresas = [
               {
                 'ruido': {
                   descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '84dB(A)',
-                  limite: '85db(A)',
+                  dose: 45, // em porcentagem
+                  tempo_amostra: 240, // em minutos
+                  jornada: 8, // em horas
+                  quantidade: '68.4dB(A)',
+                  limite: '85dB(A)',
                 },
                 'calor': {
                   descricao: 'Dentro dos limites de tolerância',
@@ -111,6 +115,9 @@ export const listaEmpresas = [
               {
                 'ruido': {
                   descricao: 'Dentro dos limites de tolerância',
+                  dose: 10, // em porcentagem
+                  tempo_amostra: 240, // em minutos
+                  jornada: 8, // em horas
                   quantidade: '67,8dB(A)',
                   limite: '85db(A)',
                 },
