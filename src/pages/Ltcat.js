@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Loading from '../components/Loading';
 import { useNavigate } from 'react-router-dom';
-import { calculaNen } from './helpers/Nen';
+import { calculaNe,calculaNen } from './helpers/Nen';
 
 function Ltcat() {
 
@@ -54,7 +54,8 @@ function Ltcat() {
   }
 
   const memoriaRuido = (doseReg, tempoAmostra, jornada) => {
-    const nen = calculaNen(doseReg, tempoAmostra, jornada);    
+    const ne = calculaNe(doseReg, tempoAmostra, jornada);
+    const nen = calculaNen(doseReg, tempoAmostra, jornada);
     let resultado = "Exposição acima do nível limite, devem ser adotadas medidas de segurança."
     if (nen < 80) {
       resultado = "Exposição abaixo do Nível de Ação, não é necessário tomar medidas de segurança."
@@ -67,8 +68,8 @@ function Ltcat() {
     }
     return (<div className="memoria-calculo">
       <p>Memoria de cálculo:</p>
-      <p>Formula utilizada para cálcular o nível de exposição ao ruído considerando a NR-15 e NHO-01</p>
-      <p>N x (D x Tc) / (100 x T) + Lc</p>
+      <p>Formula utilizada para cálcular o nível de exposição médio (NE) ao ruído considerando a NR-15 e NHO-01</p>
+      <p>NE = N x ((Tc / T) x (D / 100)) + Lc</p>
       <ul>
         <p>Onde:</p>
         <li>NE = Leq - Nível de Ruído Equivalente;</li>
@@ -79,7 +80,13 @@ function Ltcat() {
         <li>Lc = Nível de critério utilizado. Considerando a normativa brasileira: 85dB</li>
       </ul>
       <p>Substituindo os valores temos:</p>
-      <p>{16.61} x ({doseReg} x (480)) / (100 x {tempoAmostra}) + 85 = <strong>{ nen }</strong></p>
+      <p>NE = {16.61} x ((480 / {tempoAmostra}) x ({doseReg}/100)) + 85 = <strong>{ ne.toFixed(2) }</strong></p>
+      <p>Para o cálculo do Nível de Exposição Normalizado (NEN), adota-se a seguinte fórmula de acordo com NHO-01:</p>
+      <p>NEN = NE + 10 log (Te / 480)</p>
+      <p>Onde:</p>
+      <p>NE = nível médio representativo da exposição ocupacional diária</p>
+      <p>Te = tempo de duração, em minutos, da jornada diária de trabalho </p>
+      <p>NEN = {ne.toFixed(2)} + 10 * log ({jornada * 60} / 480) = <strong>{ nen.toFixed(2) }</strong></p>
       <p>{ resultado }</p>
     </div>)
   }
@@ -257,32 +264,33 @@ function Ltcat() {
                                       <strong>
                                         {Object.keys(riscos)[i]}
                                       </strong>
-                                      {/* {`: Exposição de maior risco ${riscos[risco].quantidade}. ${riscos[risco].descricao}: ${riscos[risco].limite}`} */}
                                       {
                                         Object.keys(riscos)[i] === "ruido"
                                          ? (
                                             <table className="tabela-exposicao">
-                                              <thead>
+                                              {/* <thead> */}
                                                 <tr>
                                                   <th>Cargo</th>
                                                   <th>Nível de Exposição (NEN)</th>
-                                                  <th>Limite Definido por Norma</th>
+                                                  <th>Tempo de Exposição (Horas)</th>
+                                                  <th>Limite Definido pela NR-15</th>
                                                 </tr>
-                                              </thead>
+                                              {/* </thead> */}
                                               <tbody>
                                                 <tr>
                                                   <td>{cargo.nome}</td>
                                                   <td>{riscos[risco].quantidade}</td>
+                                                  <td>{riscos[risco].jornada}</td>
                                                   <td>{riscos[risco].limite}</td>
                                                 </tr>
                                               </tbody>
-                                              <tfoot>
-                                              {
-                                                memoriaRuido(riscos[risco].dose, riscos[risco].tempo_amostra, riscos[risco].jornada)
-                                              }
+                                              <tfoot className="memoria-container">
+                                                {
+                                                  memoriaRuido(riscos[risco].dose, riscos[risco].tempo_amostra, riscos[risco].jornada)
+                                                }
                                               </tfoot>
                                             </table>
-                                         ): <p>{`Exposição de maior risco ${riscos[risco].quantidade}. ${riscos[risco].descricao}: ${riscos[risco].limite}`}</p>
+                                         ): <p>{`Exposição de maior risco: `}<strong>{riscos[risco].quantidade}</strong>. {riscos[risco].descricao}: {riscos[risco].limite}</p>
                                       }
                                     </li>
                                   ))}

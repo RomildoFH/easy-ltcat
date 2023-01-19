@@ -31,7 +31,7 @@ export const listaEmpresas = [
               {
                 'ruido': {
                   descricao: 'Dentro dos limites de tolerância',
-                  dose: 45, // em porcentagem
+                  dose: 5, // em porcentagem
                   tempo_amostra: 240, // em minutos
                   jornada: 8, // em horas
                   quantidade: '68.4dB(A)',
@@ -39,7 +39,7 @@ export const listaEmpresas = [
                 },
                 'calor': {
                   descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '',
+                  quantidade: 'IBUTG - 26,4',
                   limite: '',
                 },
               }
@@ -123,7 +123,7 @@ export const listaEmpresas = [
                 },
                 'calor': {
                   descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '',
+                  quantidade: 'IBUTG - 26,4',
                   limite: '',
                 },
               }

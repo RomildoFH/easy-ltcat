@@ -36,18 +36,25 @@ const tabelaExposicao = { // nível de ruído (dB(A)) x Tempo máximo diário pe
   115: 0.46,
 }
 
-
-const calculaNen = (doseCalc, tempoAmostra, jornada) => {
-  const nivelExposicao = 16.61 * Math.log10((doseCalc/100) * 480/tempoAmostra) + 85;
-  
-  const nivelNormalizado = nivelExposicao + 16.61 * Math.log10(((jornada * 60)/480));
-
-  return nivelNormalizado.toFixed(1);
+const calculaNe = (doseEquip, tempoAmostra) => {
+  const nivelExposicao = 16.61 * Math.log10((480/tempoAmostra) * (doseEquip/100)) + 85;
+  console.log(`tempo de amostra: ${tempoAmostra}`)
+  return nivelExposicao;
 }
 
-const calculaDose = (doseCalc, tempoAmostra, jornada) => {
-  const doseMaxima = doseCalc * (jornada * 60) / tempoAmostra;
-  if (doseCalc < doseMaxima) {
+const calculaNen = (doseEquip, tempoAmostra, jornada) => {
+  const nivelExposicao = calculaNe(doseEquip, tempoAmostra);
+  
+  const nivelNormalizado = nivelExposicao + 10 * Math.log10(((jornada * 60)/480));
+
+  console.log(`tempo de jornada: ${(jornada * 60)}`)
+
+  return nivelNormalizado;
+}
+
+const calculaDose = (doseEquip, tempoAmostra, jornada) => {
+  const doseMaxima = doseEquip * (jornada * 60) / tempoAmostra;
+  if (doseEquip < doseMaxima) {
     return "Exposição abaixo do limite permitido"
   }
   return "Exposição acima do limite permitido, devem ser previstas ações para proteção do colaborador"
@@ -55,6 +62,7 @@ const calculaDose = (doseCalc, tempoAmostra, jornada) => {
 
 export {
   tabelaExposicao,
+  calculaNe,
   calculaNen,
   calculaDose,
 };

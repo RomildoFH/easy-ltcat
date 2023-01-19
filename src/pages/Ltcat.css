@@ -91,6 +91,9 @@
 .memoria-calculo {
   margin-top: 10px;
   text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 @media print {
