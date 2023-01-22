@@ -83,11 +83,31 @@ function Ltcat() {
       <p>NE = {16.61} x ((480 / {tempoAmostra}) x ({doseReg}/100)) + 85 = <strong>{ ne.toFixed(2) }</strong></p>
       <p>Para o cálculo do Nível de Exposição Normalizado (NEN), adota-se a seguinte fórmula de acordo com NHO-01:</p>
       <p>NEN = NE + 10 log (Te / 480)</p>
-      <p>Onde:</p>
-      <p>NE = nível médio representativo da exposição ocupacional diária</p>
-      <p>Te = tempo de duração, em minutos, da jornada diária de trabalho </p>
-      <p>NEN = {ne.toFixed(2)} + 10 * log ({jornada * 60} / 480) = <strong>{ nen.toFixed(2) }</strong></p>
-      <p>{ resultado }</p>
+      <ul>
+        <p>Onde:</p>
+        <p>NE = nível médio representativo da exposição ocupacional diária</p>
+        <p>Te = tempo de duração, em minutos, da jornada diária de trabalho </p>
+        <p>NEN = {ne.toFixed(2)} + 10 * log ({jornada * 60} / 480) = <strong>{ nen.toFixed(2) }</strong></p>
+        <p>{ resultado }</p>
+      </ul>
+    </div>)
+  }
+
+  const memoriacalor = () => {
+    return (
+    <div className="memoria-calculo">
+      <p>Memoria de cálculo:</p>
+      <p>Para o cálculo da exposição ao calor (IBUTG) foi considerado a fórmula descrita na NR-15:</p>
+      <p>IBUTG<sub>m</sub> = (IBUTG<sub>1</sub> * t<sub>1</sub> + IBUTG<sub>2</sub> * t<sub>2</sub> + IBUTG<sub>n</sub> * t<sub>n</sub>)/60</p>
+      <ul>
+        <p>Onde:</p>
+        <p>IBUTG<sub>m</sub>: É o Índice de Bulbo Úmido Termômetro de Globo Médio;</p>
+        <p>IBUTG<sub>n</sub>: É o Índice de Bulbo Úmido Termômetro de Globo da atividade, informado pelo equipamento ou cálculado;</p>
+        <p>t<sub>n</sub>: É a duração da atividade em minutos;</p>
+      </ul> 
+      <p>A norma prevé que além da observação ao calor sejam também avaliadas as condições de esforço para realização das atividades e seja feita uma ponderação entre calor x taxa de metabolismo para definição do limite de exposição.</p>
+      <p>Logo, para o cálculo da taxa metabólica foi também cálculada a média ponderada das atividades executadas ao longo dos 60 minutos críticos da jornada de trabalho:</p>
+      <p>M<sub>m</sub> = (M<sub>1</sub> * t<sub>1</sub> + M<sub>2</sub> * t<sub>2</sub> + M<sub>n</sub> * t<sub>n</sub>)/60</p>
     </div>)
   }
 
@@ -122,7 +142,7 @@ function Ltcat() {
                   </ul>
                 </div>
                 <p>
-                  <strong>{empresa.data_da_pericia}</strong>
+                  <strong>{empresa.versao_do_laudo}</strong>
                 </p>
               </section>
             </td>
@@ -290,8 +310,38 @@ function Ltcat() {
                                                 }
                                               </tfoot>
                                             </table>
-                                         ): <p>{`Exposição de maior risco: `}<strong>{riscos[risco].quantidade}</strong>. {riscos[risco].descricao}: {riscos[risco].limite}</p>
+                                         ): null
                                       }
+                                      {
+                                        Object.keys(riscos)[i] === "calor"
+                                         ? (
+                                            <table className="tabela-exposicao">
+                                              <tr>
+                                                <th>Cargo</th>
+                                                <th>Nível de Exposição (IBUTG)</th>
+                                                <th>Taxa metabolica (W)</th>
+                                                <th>Limite Definido pela NR-15</th>
+                                              </tr>
+                                              <tbody>
+                                                <tr>
+                                                  <td>{cargo.nome}</td>
+                                                  <td>{riscos[risco].quantidade}</td>
+                                                  <td>{riscos[risco].taxa_metabolica}</td>
+                                                  <td>{riscos[risco].limite}</td>
+                                                </tr>
+                                              </tbody>
+                                              <tfoot className="memoria-container">
+                                                {
+                                                  memoriacalor(riscos[risco].dose)
+                                                }
+                                              </tfoot>
+                                            </table>
+                                         ): null
+                                      }
+                                      {
+                                        (Object.keys(riscos)[i] !== "calor" && Object.keys(riscos)[i] !== "ruído") ?
+                                        <p>{`Exposição de maior risco: `}<strong>{riscos[risco].quantidade}</strong>. {riscos[risco].descricao}: {riscos[risco].limite}</p> : null
+                                      }                                      
                                     </li>
                                   ))}
                                 </ul>
@@ -368,9 +418,9 @@ function Ltcat() {
                   <h3 className="article-title">
                     9. Equipamentos de medição utilizados
                   </h3>
-                  <p className="article-paragraph">{`Para avaliar a exposição ao nível de pressão sonora, utilizamos ${empresa.equipamentos[0].nome}, marca ${empresa.equipamentos[0].marca}, modelo ${empresa.equipamentos[0].modelo}, procedência ${empresa.equipamentos[0].procedencia}. ${empresa.equipamentos[0].metodo}`}</p>
+                  <p className="article-paragraph">{`Para avaliar a exposição ao nível de pressão sonora, utilizamos ${empresa.equipamentos[0].nome}, marca ${empresa.equipamentos[0].marca}, modelo ${empresa.equipamentos[0].modelo}. ${empresa.equipamentos[0].metodo}`}</p>
                   <br />
-                  <p className="article-paragraph">{`Para avaliar a exposição ao calor, utilizamos ${empresa.equipamentos[1].nome} da marca ${empresa.equipamentos[1].marca}. ${empresa.equipamentos[1].metodo}`}</p>
+                  <p className="article-paragraph">{`Para avaliar a exposição ao calor, utilizamos ${empresa.equipamentos[1].nome} da marca ${empresa.equipamentos[1].marca} e modelo ${empresa.equipamentos[1].modelo}. ${empresa.equipamentos[1].metodo} Totalizando 60 minutos de medição.`}</p>
                 </article>
               </section>
             </td>

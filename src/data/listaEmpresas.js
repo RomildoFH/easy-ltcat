@@ -31,16 +31,21 @@ export const listaEmpresas = [
               {
                 'ruido': {
                   descricao: 'Dentro dos limites de tolerância',
-                  dose: 5, // em porcentagem
+                  dose: 40, // em porcentagem
                   tempo_amostra: 240, // em minutos
                   jornada: 8, // em horas
-                  quantidade: '68.4dB(A)',
+                  quantidade: '83.4dB(A)',
                   limite: '85dB(A)',
                 },
                 'calor': {
                   descricao: 'Dentro dos limites de tolerância',
-                  quantidade: 'IBUTG - 26,4',
-                  limite: '',
+                  quantidade: '26,4°',
+                  limite: '28,5°',
+                  carga_solar:false,
+                  ibutg_medio: 29.8,
+                  tipo_de_atividade: 'Trabalho moderado com dois braços',
+                  taxa_metabolica: 258,
+                  jornada: 8,
                 },
               }
             ]
@@ -48,27 +53,6 @@ export const listaEmpresas = [
           {
             'Risco Químico': [
               {
-                'poeira': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                },
-                'corrosivos': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                },
-                'inflamáveis': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                },
-                'óleos e graxas': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                }
-                ,
                 'tintas e vernizes': {
                   descricao: 'Tinta a base de água, não contém riscos para a saúde',
                   quantidade: '0 ppm',
@@ -101,105 +85,19 @@ export const listaEmpresas = [
         exposicao: 'Não se expõem a nenhum agente físico, químico, biológico ou ergonômico, em níveis que venham a causar danos a sua saúde',
         recomendacoes: ['Manter o uso de protetor auricular', 'Elaborar um cronograma para garantir o correto revesamento', 'Realizar práticas de ginástica laboral'],
       },
-      {
-        nome: 'Auxiliar administrativo',
-        atividades: [
-          'Realiza trabalhos de contabilidade',
-          'Organizar o setor de trabalho',
-          'Organizar documentações',
-          'Realiza substituição de cartucho de tinta em impressora do escritório',
-        ],
-        agentes_nocivos: [
-          {
-            'Risco Físico': [
-              {
-                'ruido': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  dose: 10, // em porcentagem
-                  tempo_amostra: 240, // em minutos
-                  jornada: 8, // em horas
-                  quantidade: '67,8dB(A)',
-                  limite: '85db(A)',
-                },
-                'calor': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: 'IBUTG - 26,4',
-                  limite: '',
-                },
-              }
-            ]
-          },
-          {
-            'Risco Químico': [
-              {
-                'poeira': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                },
-                'corrosivos': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                },
-                'inflamáveis': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                },
-                'óleos e graxas': {
-                  descricao: 'Dentro dos limites de tolerância',
-                  quantidade: '0 ppm',
-                  limite: '',
-                }
-                ,
-                'tintas e vernizes': {
-                  descricao: 'Tinta a base de água, não contém riscos para a saúde',
-                  quantidade: '0 ppm',
-                  limite: '',
-                }
-              }
-            ]
-          },
-          {
-            'Risco Biológico': [
-              {
-                'vírus': {
-                  descricao: 'Risco Inexistente',
-                  quantidade: 'NA',
-                  limite: 'NA',
-                },
-                'bactérias': {
-                  descricao: 'Risco Inexistente',
-                  quantidade: 'NA',
-                  limite: 'NA',
-                }
-              }
-            ]
-          }
-        ],
-        medidas_administrativas: ['Revesamento de atividades'],
-        epi: ['calçado de segurança'],
-        epc: ['Não há equipamento de proteção coletiva'],
-        tempo_exposicao: 'Ausência de Agentes Nocivos',
-        exposicao: 'Não se expõem a nenhum agente físico, químico, biológico ou ergonômico, em níveis que venham a causar danos a sua saúde',
-        recomendacoes: ['Realizar práticas de ginástica laboral'],
-      }
     ],
     equipamentos: [
       {
         nome: 'Dosimetro',
         marca: 'Instrutherm',
         modelo: 'DOS-600',
-        procedencia: 'americana',
         metodo: 'As medições foram realizadas com o instrumento colocado na altura do ouvido humano, estando o mesmo, com circuito de resposta linear.'
       },
       {
-        nome: 'Termômetro Digital Quest',
-        marca: 'Quest',
-        modelo: '',
-        procedencia: '',
-        metodo: 'A medição foi realizada com o instrumento colocado na altura do funcionário, e a 01 (um) metro do posto de trabalho.'
+        nome: 'Medidor de stress térmico',
+        marca: 'Instrutherm',
+        modelo: 'TGD-400',
+        metodo: 'A medição foi realizada com o instrumento colocado na altura do peito do funcionário, na região de maior incidência de calor.'
       },
     ],
     metodologia: [''],

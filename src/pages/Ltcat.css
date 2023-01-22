@@ -90,10 +90,10 @@
 
 .memoria-calculo {
   margin-top: 10px;
-  text-align: left;
+  text-align: justify;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 120%;
 }
 
 @media print {
