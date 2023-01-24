@@ -84,6 +84,7 @@ export const listaEmpresas = [
         tempo_exposicao: 'Ausência de Agentes Nocivos',
         exposicao: 'Não se expõem a nenhum agente físico, químico, biológico ou ergonômico, em níveis que venham a causar danos a sua saúde',
         recomendacoes: ['Manter o uso de protetor auricular', 'Elaborar um cronograma para garantir o correto revesamento', 'Realizar práticas de ginástica laboral'],
+        resumo_dos_riscos: ['ergonômico', 'acidente'],
       },
     ],
     equipamentos: [
@@ -136,6 +137,8 @@ export const listaEmpresas = [
     cargos: [
       {
         nome: 'Auxiliar administrativo',
+        masc: 0,
+        fem: 1,
         atividades: [
           'Atendimento ao público, controle do fluxo de caixa;',
           'Auxilia no empacotamento de pães e bolachas;',
@@ -200,9 +203,12 @@ export const listaEmpresas = [
         tempo_exposicao: 'Ausência de Agentes Nocivos',
         exposicao: 'Não se expõem a nenhum agente físico, químico ou biológico, em níveis que venham a causar danos a sua saúde',
         recomendacoes: ['Realizar atividades de ginástica laboral períodicas', 'Manter equipamentos sempre com a manutenção em dias',],
+        resumo_dos_riscos: ['ergonômico', 'físico', 'acidente'],
       },
       {
         nome: 'Padeiro',
+        masc: 1,
+        fem: 0,
         atividades: [
           'Separa os ingredientes da mistura, calculando as quantidades e qualidades necessárias para confeccionar a massa;',
           'Dar tratamentos necessários à massa, fermentando-a, misturando e amassando seus ingredientes, empregando processo manual ou mecânico, a fim de prepará-la para cozimento;',
@@ -267,6 +273,7 @@ export const listaEmpresas = [
         tempo_exposicao: 'Ausência de Agentes Nocivos',
         exposicao: 'Não se expõem a nenhum agente físico, químico ou biológico, em níveis que venham a causar danos a sua saúde',
         recomendacoes: ['Realizar atividades de ginástica laboral períodicas', 'Manter equipamentos sempre com a manutenção em dias',],
+        resumo_dos_riscos: ['ergonômico'],
       }
     ],
     equipamentos: [

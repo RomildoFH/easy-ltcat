@@ -1,5 +1,9 @@
 import React, { useContext } from 'react';
 import AppContext from '../../context/AppContext';
+import QuadroFuniocnal from './QuadroFuniocnal';
+
+const matrizRisco = require('../Pgr/matriz_de_risco.png');
+const matrizPriorizacao = require('../Pgr/matriz_de_prioridade.png');
 
 function BasePGR() {
   const { empresa } = useContext(AppContext);
@@ -381,8 +385,52 @@ function BasePGR() {
                   </table>
                 </article>
                 <article className="article-container">
-                  <h3 className="article-title">5. Período de vigência</h3>
-                  <p className="article-paragraph">{`O LTCAT não possui um prazo de validade estabelecido pela legislação vigente, porém deve ser reavaliado. sempre que houver alteração no ambiente de trabalho como mudanças no layout, substituição de máquinas e/ou equipamentos, adoção ou alteração de tecnologias de proteção coletiva, quando as intensidades ou concentrações dos agentes ambientais alcançarem os níveis de ação ou quando a Empresa julgar oportuno uma nova avaliação.`}</p>
+                  <h3 className="article-title">5. NIVEL DE AÇÃO E LIMITE DE TOLERÂNCIA</h3>
+                  <p className="article-paragraph">
+                    Chama-se nível de ação o valor acima do qual devem ser iniciadas açöes preventivas de forma a minimizar a probabilidade de que as exposições aos agentes ultrapassem os limites de exposição.
+                  </p>
+                  <p className="article-paragraph">
+                    Para agentes químicos, o nível de ação é a metade dos limites de exposição, para o ruído, a dose superior a 50% do tempo máximo de exposição permitida do critério estabelecido na NR 15.
+                  </p>
+                  <p className="article-paragraph">
+                    Não se deve confundir o Nîvel de Açăo com o Limite de Tolerância, este último quando superado, requer ações corretivas imediatas, enquanto que o primeiro ficará restrito às ações de ordem preventiva e atençäo.
+                  </p>
+                  <p className="article-subtitle">TABELAS PARA AVALIAÇÃO:</p>
+                  <p className="article-paragraph">
+                    As tabelas de gradação de severidade e probabilidade sugeridas são as tabelas da AIHA - American Industrial Hygiene Associaton, AS/NZS 4360 e European Comission (recomendadas pela Fundacentro). Todas elas possuem gradações de 1 a 5, que vão determinar a classificação da severidade e probabilidade.
+                  </p>
+                  <p className="article-paragraph">
+                    As gradaçöes de probabilidade săo 5 (cinco): Rara (1); Pouco Provável (2); Possível (3); Provável (4) e Muito Provável (5). Nas avaliações qualitativas, de acordo com o controle e exposição ao risco, determina-se de 1 a 5 o nîvel de probabilidade. Em avaliações quantitativas, a probabilidade é classificada de acordo com a porcentagem do valor de exposição ao LEO - Limite de Exposição Ocupacional.
+                  </p>
+                  <p className="article-subtitle">MATRIZ DE RISCO UTILIZADA:</p>
+                  <p className="article-paragraph">
+                    A Matriz de Risco utilizada neste Programa de Gerenciamento de Riscos é uma matriz no formato 5x5, baseada nas estimativas de gradações de Severidade e Probabilidade da AIHA - American Industrial Hygiene Associaton, AS/NZS 4360 e European Comission (recomendadas pela Fundacentro). Esta matriz funciona para avalíações qualitativas e quantitativas, pois as tabelas de gradações sugeridas possuem as estimativas adequadas para ambas às avaliações.
+                  </p>
+                  <p className="article-paragraph">
+                    Os níveis de risco presentes na matriz são 5 (cinco): Trivial (1-3); Tolerável (3-8); Moderado (4-12); Substancial (10-15) e lntolerável (15-25). Cada nîvel de risco possui o seu método de controle sugerido, baseado na estimativa (grau de certeza) da avaliaşão, onde os riscos de níveis mais altos têm prioridade de açăo.
+                  </p>
+                  <figure className="matriz-image">
+                    <img src={matrizRisco} alt="matriz-de-risco" />
+                    <figcaption>Imagem 01 - Matriz de risco baseada no modelo AIHA</figcaption>
+                  </figure>
+                  <p className="article-subtitle">MEDIDAS DE CONTROLE E AÇÃO:</p>
+                  <p className="article-paragraph">
+                    Os métodos de controle são classificados de acordo com o nível do risco e grau de certeza da estimativa da avaliação. Os níveis de risco mais altos devem ter prioridade na ação de controle. A ação de controle é classificada de acordo com a estimativa, que pode ser: certa (0); incerta (1) e altamente incerta (2).
+                  </p>
+                  <p className="article-paragraph">
+                    Esta classificação padrão dos métodos de controle funciona apenas para o Inventário de Riscos e não deve ser adotada como método único para o Plano de Ação. Contudo, como as ações de controle serão feitas baseadas no inventário, estas classificações servem para definir a prioridade das ações. A tabela utilizada foi recomendada pela Fundacentro.
+                  </p>
+                  <figure className="matriz-image">
+                    <img src={matrizPriorizacao} alt="matriz-de-risco" />
+                    <figcaption>Imagem 02 - Matriz de prioridade definida através do risco</figcaption>
+                  </figure>
+                </article>
+                <article className="article-container">
+                  <h3 className="article-title">6. QUADRO FUNCIONAL</h3>
+                  <p className="article-paragraph">
+                    Para facilitar sistematizações realizadas neste programa, relaciona-se a seguir todas as funções existentes na empresa com a correspondente quantidade de profissionais que desempenham essas funções divididas por sexo e identificação preliminar simplificada dos perigos aos quais estes profissionais estão expostos.
+                  </p>
+                  <QuadroFuniocnal />
                 </article>
               </section>
   )

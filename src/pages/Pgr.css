@@ -6,3 +6,32 @@
 .article-table-info td, .article-table-info th {
   border: 1px solid black;
 }
+
+.table-container {
+  margin: 16px 0;
+}
+
+#quadro-funcional {
+  text-align: center;
+}
+
+#quadro-funcional thead{
+  font-weight: bold;
+}
+
+.matriz-risco td, .matriz-risco th{
+  border: 1px solid black;
+}
+
+.matriz-image {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.matriz-image img {
+  width: 80%;
+}
