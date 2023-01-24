@@ -285,8 +285,8 @@ export const listaEmpresas = [
     ],
     metodologia: [''],
     conclusao: 'Seguindo os parâmetros legais, podemos concluir que as atividades de nenhum colaborador provoca exposição a agente nocivo em níveis que venham a causar danos a sua saúde. Portanto, nenhuma atividade se enquandra no Regulamento da Previdência Social para fins de emissão do formulário de informações sobre Atividdades com Expisções a Agentes Agressivos - Aposentadoria Especial do INSS - Instituto Nacional de Seguridade Social.',
-    cidade: 'Algelim - PE',
-    data_conclusao: '12 de Janeiro de 2022',
+    cidade: 'Angelim - PE',
+    data_conclusao: '12 de Janeiro de 2023',
     responsavel_empresa: {
       nome: 'Germano Cabral Lopes',
       cargo: 'Proprietário',

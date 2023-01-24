@@ -1,0 +1,8 @@
+.article-subtitle {
+  font-weight: bold;
+  margin: 12px 0 0 0;
+}
+
+.article-table-info td, .article-table-info th {
+  border: 1px solid black;
+}

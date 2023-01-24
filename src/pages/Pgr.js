@@ -4,6 +4,8 @@ import './Pgr.css';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import Loading from '../components/Loading';
+import { useNavigate } from 'react-router-dom';
+import BasePGR from '../components/Pgr/BasePGR';
 
 function Pgr() {
 
@@ -16,6 +18,24 @@ function Pgr() {
     return empresa.cargos.map((cargo) => (
       <li key={ cargo.nome }>{cargo.nome}</li>
     ));
+  }
+
+  const navegate = useNavigate();
+
+  const handleClick = ({target}) => {
+
+    const { name } = target
+
+    switch (name) {
+      case 'home':
+        navegate('/easy-ltcat')
+        break;
+      case 'print':
+        window.print();
+        break;
+      default:
+        break;
+    }
   }
 
   const textMedicoes = () => {
@@ -37,7 +57,11 @@ function Pgr() {
     <Loading />
   ) : (
     <div className="page-container">
-      <table className="page-container">
+      <div>
+        <button name="home" className="btn btn-warning" onClick={handleClick}>Home</button>
+        <button name="print" className="btn btn-warning" onClick={handleClick}>Imprimir</button>
+      </div>
+      <table className="main-container">
         <thead>
           <tr>
             <td>
@@ -50,7 +74,7 @@ function Pgr() {
             <td>
               <section className="cover-page">
                 <div>
-                  <h2 className="cover-title">{empresa.nome_fantazia}</h2>
+                  <h2 className="cover-title">{empresa.nome_fantasia}</h2>
                   <p className="cover-andress">{empresa.endereco}</p>
                 </div>
                 <div className="cover-functions">
@@ -60,9 +84,10 @@ function Pgr() {
                   </ul>
                 </div>
                 <p>
-                  <strong>{empresa.data_da_pericia}</strong>
+                  <strong>{empresa.versao_do_laudo}</strong>
                 </p>
               </section>
+              <BasePGR />
             </td>
           </tr>          
         </tbody>

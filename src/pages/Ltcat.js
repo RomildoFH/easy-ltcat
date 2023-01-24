@@ -116,10 +116,10 @@ function Ltcat() {
   ) : (
     <div className="page-container">
       <div>
-        <button name="home" class="btn btn-warning" onClick={handleClick}>Home</button>
-        <button name="print" class="btn btn-warning" onClick={handleClick}>Imprimir</button>
+        <button name="home" className="btn btn-warning" onClick={handleClick}>Home</button>
+        <button name="print" className="btn btn-warning" onClick={handleClick}>Imprimir</button>
       </div>
-      <table className="page-container">
+      <table className="main-container">
         <thead>
           <tr>
             <td>
@@ -340,7 +340,7 @@ function Ltcat() {
                                       }
                                       {
                                         (Object.keys(riscos)[i] !== "calor" && Object.keys(riscos)[i] !== "ruído") ?
-                                        <p>{`Exposição de maior risco: `}<strong>{riscos[risco].quantidade}</strong>. {riscos[risco].descricao}: {riscos[risco].limite}</p> : null
+                                        <p key={`risco-${riscos}`}>{`Exposição de maior risco: `}<strong>{riscos[risco].quantidade}</strong>. {riscos[risco].descricao}: {riscos[risco].limite}</p> : null
                                       }                                      
                                     </li>
                                   ))}
@@ -388,7 +388,7 @@ function Ltcat() {
                         <ul>
                           {
                             cargo.recomendacoes.map((recomendacao) => (
-                              <li>{recomendacao}</li>
+                              <li key={recomendacao}>{recomendacao}</li>
                             ))
                           }
                         </ul>
