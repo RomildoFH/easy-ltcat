@@ -32,6 +32,15 @@
   width: 100%;
 }
 
+.article-image {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
 .matriz-image img {
   width: 80%;
 }

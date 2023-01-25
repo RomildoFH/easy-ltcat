@@ -6,6 +6,7 @@ import Header from '../components/Header/Header';
 import Loading from '../components/Loading';
 import { useNavigate } from 'react-router-dom';
 import BasePGR from '../components/Pgr/BasePGR';
+import RiskAssesment from '../components/Pgr/riscos/RiskAssesment';
 
 function Pgr() {
 
@@ -36,21 +37,6 @@ function Pgr() {
       default:
         break;
     }
-  }
-
-  const textMedicoes = () => {
-    let string = '';
-    const newArray = empresa.medicoes;
-    for (let index in newArray) {
-      if (index < newArray.length - 2) {
-        string += newArray[index] + ', ';
-      } else if (index < newArray.length - 1) {
-        string += newArray[index] + ' e '
-      } else {
-        string += newArray[index];
-      }
-    }
-    return string;
   }
 
   return isLoading ? (
@@ -88,6 +74,7 @@ function Pgr() {
                 </p>
               </section>
               <BasePGR />
+              <RiskAssesment />
             </td>
           </tr>          
         </tbody>

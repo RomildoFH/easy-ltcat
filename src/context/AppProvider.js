@@ -3,11 +3,11 @@ import AppContext from './AppContext';
 
 function AppProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
-  const [nomeEmpresa, setNomeEmpresa] = useState('');
-  const [cnpj, setCnpj] = useState('');
+  const [nomeEmpresa, setNomeEmpresa] = useState('GERMANO CABRAL LOPES');
+  const [cnpj, setCnpj] = useState('11.546.968/0001-34');
   const [empresa, setEmpresa] = useState({});
-  const [laudo, setLaudo] = useState('ltcat');
-  const [versaoDoLaudo, setVersaoDoLaudo] = useState('2022.1');
+  const [laudo, setLaudo] = useState('pgr');
+  const [versaoDoLaudo, setVersaoDoLaudo] = useState('2023.1');
 
   const values = useMemo(() => ({
     isLoading,
