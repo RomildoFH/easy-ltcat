@@ -1,0 +1,55 @@
+.table-action-plan {
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+
+.table-action-plan td {
+  border: 1px solid black;
+}
+
+.text-bold {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lista-atividades-inventario {
+  list-style: none;
+  list-style-position: inside;
+  text-align: left;
+  margin: 0 0 0 -20px;
+}
+
+.lista-ep {
+  list-style: none;
+  list-style-position: inside;
+  text-align: left;
+  margin: 0 0 0 -20px;
+}
+
+.fill-blank {
+  color: white;
+}
+
+.risco-intoleravel {
+  background-color: red;
+}
+
+.risco-substancial {
+  background-color: orangered; 
+}
+
+.risco-moderado {
+  background-color: yellow;
+}
+
+.risco-toleravel {
+  background-color: greenyellow;
+}
+
+.risco-trivial {
+  background-color: blue;
+}

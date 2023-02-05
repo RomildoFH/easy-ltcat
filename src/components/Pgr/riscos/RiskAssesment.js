@@ -1,25 +1,11 @@
 import React, { useContext } from "react";
 import AppContext from "../../../context/AppContext";
+import setPrioridade from "./calcPriority";
 import "./style.css";
 
 function RiskAssesment() {
   const { empresa } = useContext(AppContext);
-  const setPrioridade = (prob, serv) => {
-    const result = prob * serv;
-    let prioridade = 'Intolerável';
-    
-    if (result < 4) {
-      prioridade = 'Trivial';
-    } else if(result < 10) {
-      prioridade = 'Tolerável';
-    } else if(result < 12) {
-      prioridade = 'Moderado';
-    } else if(result < 15) {
-      prioridade = 'Substâncial';
-    }
-
-    return prioridade;
-  }
+  
   return (
     <article className="article-container">
       <h3 className="article-title">

@@ -1,0 +1,24 @@
+.modelo-ficha-epi {
+  width: 95%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 12px;
+}
+
+.modelo-ficha-epi td {
+  border: 1px solid black;
+  width: 100px;
+}
+
+.lista-observacoes-ficha {
+  list-style: none;
+  text-align: left;
+  list-style-position: inside;
+}
+
+.lista-observacoes-ficha li {
+  margin-left: -20px;
+}

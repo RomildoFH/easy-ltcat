@@ -7,6 +7,13 @@ import Loading from '../components/Loading';
 import { useNavigate } from 'react-router-dom';
 import BasePGR from '../components/Pgr/BasePGR';
 import RiskAssesment from '../components/Pgr/riscos/RiskAssesment';
+import RiskInventary from '../components/Pgr/inventario/RiskInventary';
+import PlanoDeAcao from '../components/Pgr/plano-acao/PlanoAcao';
+import QuadroObrigacoes from '../components/Pgr/quadro-de-obrigacoes/QuadroObrigacoes';
+import AcompanhamentoAcidentes from '../components/Pgr/acompanhamento-acidentes/AcompanhamentoAcidentes';
+import FichaEpi from '../components/Pgr/ficha-epi/FichaEpi';
+import ProcedimentosEmergencia from '../components/Pgr/procedimentos-emergencia/ProcedimentosEmergencia';
+import Responsabilidade from '../components/Pgr/responsabilidade/Responsabilidade';
 
 function Pgr() {
 
@@ -75,8 +82,15 @@ function Pgr() {
               </section>
               <BasePGR />
               <RiskAssesment />
+              <RiskInventary />
+              <PlanoDeAcao />
+              <QuadroObrigacoes />
+              <AcompanhamentoAcidentes />
+              <FichaEpi />
+              <ProcedimentosEmergencia />
+              <Responsabilidade />
             </td>
-          </tr>          
+          </tr>
         </tbody>
         <tfoot>
           <tr>

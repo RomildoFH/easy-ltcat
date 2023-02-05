@@ -164,6 +164,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Máquinas e equipametos',
                   danos: 'Perca de audição parcial ou total',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 },
                 'calor': {
                   fator: 'Calor',
@@ -180,6 +184,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Máquinas, equipametos e clima',
                   danos: 'Exaustão por calor, problemas respiratórios e alterações na pressão',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 },
               }
             ]
@@ -199,6 +207,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Material utilizado',
                   danos: 'Doenças respiratórias',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 }
               }
             ]
@@ -218,6 +230,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Nenhuma',
                   danos: 'Doença viral',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 },
                 'bactérias': {
                   fator: 'Bactérias',
@@ -231,6 +247,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Nenhuma',
                   danos: 'Doença bacteriana',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 }
               }
             ]
@@ -241,7 +261,7 @@ export const listaEmpresas = [
                 'postura inadequada': {
                   fator: 'Postura inadequada',
                   descricao: 'Risco não encontra-se em níveis que possam provocar lesão',
-                  quantidade: 'Não há risco',
+                  quantidade: 'Exposição Leve',
                   limite: 'Limite não aplicável',
                   probabilidade: 1,
                   severidade: 5,
@@ -250,11 +270,15 @@ export const listaEmpresas = [
                   monitorar: true,
                   fonte: 'Posto de trabalho',
                   danos: 'LER/DORT',
+                  medidas_existentes: 'Nenhuma implementada',
+                  medidas_necessarias: 'Realizar ginásticas laboral',
+                  responsavel_medidas: 'Empregador',
+                  como_medidas: 'Antes do início dos trabalhos e ministrado por profissional habilitado',
                 },
                 'excesso de peso': {
                   fator: 'Excesso de peso',
                   descricao: 'Risco não encontra-se em níveis que possam provocar lesão',
-                  quantidade: 'Não há risco',
+                  quantidade: 'Exposição Leve',
                   limite: 'Limite não aplicável',
                   probabilidade: 2,
                   severidade: 3,
@@ -263,11 +287,15 @@ export const listaEmpresas = [
                   monitorar: true,
                   fonte: 'Material e equipamento',
                   danos: 'LER/DORT',
+                  medidas_existentes: 'Nenhuma implementada',
+                  medidas_necessarias: 'Realizar ginásticas laboral',
+                  responsavel_medidas: 'Empregador',
+                  como_medidas: 'Antes do início dos trabalhos e ministrado por profissional habilitado',
                 },
                 'movimentos repetitivos': {
                   fator: 'Movimentos repetitivos',
                   descricao: 'Risco não encontra-se em níveis que possam provocar lesão',
-                  quantidade: 'Não há risco',
+                  quantidade: 'Média (Índice OCRA 4,6 - 9,0)',
                   limite: 'Limite não aplicável',
                   probabilidade: 3,
                   severidade: 2,
@@ -276,6 +304,10 @@ export const listaEmpresas = [
                   monitorar: true,
                   fonte: 'Atividades desempenhadas',
                   danos: 'LER/DORT',
+                  medidas_existentes: 'Nenhuma implementada',
+                  medidas_necessarias: 'Realizar ginásticas laboral',
+                  responsavel_medidas: 'Empregador',
+                  como_medidas: 'Antes do início dos trabalhos e ministrado por profissional habilitado',
                 },
               }
             ]
@@ -319,6 +351,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Máquinas e equipametos',
                   danos: 'Perca de audição parcial ou total',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 },
                 'calor': {
                   fator: 'Calor',
@@ -336,6 +372,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Máquinas, equipametos e clima',
                   danos: 'Exaustão por calor, problemas respiratórios e alterações na pressão',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 },
               }
             ]
@@ -355,6 +395,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Materiais',
                   danos: 'Doenças respiratórias',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 }
               }
             ]
@@ -374,6 +418,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Nenhuma',
                   danos: 'Doença viral',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 },
                 'bactérias': {
                   fator: 'Bactérias',
@@ -387,6 +435,10 @@ export const listaEmpresas = [
                   monitorar: false,
                   fonte: 'Nenhuma',
                   danos: 'Doença bacteriana',
+                  medidas_existentes: 'Nenhuma requerida',
+                  medidas_necessarias: 'Nenhuma requerida',
+                  responsavel_medidas: '',
+                  como_medidas: '',
                 }
               }
             ]
@@ -397,7 +449,7 @@ export const listaEmpresas = [
                 'postura inadequada': {
                   fator: 'Postura inadequada',
                   descricao: 'Risco não encontra-se em níveis que possam provocar lesão',
-                  quantidade: 'Não há risco',
+                  quantidade: 'Exposição Leve',
                   limite: 'Limite não aplicável',
                   probabilidade: 2,
                   severidade: 3,
@@ -406,11 +458,15 @@ export const listaEmpresas = [
                   monitorar: true,
                   fonte: 'Posto de trabalho',
                   danos: 'LER/DORT',
+                  medidas_existentes: 'Nenhuma implementada',
+                  medidas_necessarias: 'Realizar ginásticas laboral',
+                  responsavel_medidas: 'Empregador',
+                  como_medidas: 'Antes do início dos trabalhos e ministrado por profissional habilitado',
                 },
                 'excesso de peso': {
                   fator: 'Excesso de peso',
                   descricao: 'Risco não encontra-se em níveis que possam provocar lesão',
-                  quantidade: 'Não há risco',
+                  quantidade: 'Exposição Leve',
                   limite: 'Limite não aplicável',
                   probabilidade: 1,
                   severidade: 5,
@@ -419,11 +475,15 @@ export const listaEmpresas = [
                   monitorar: true,
                   fonte: 'Material e equipamentos',
                   danos: 'LER/DORT',
+                  medidas_existentes: 'Nenhuma implementada',
+                  medidas_necessarias: 'Realizar ginásticas laboral',
+                  responsavel_medidas: 'Empregador',
+                  como_medidas: 'Antes do início dos trabalhos e ministrado por profissional habilitado',
                 },
                 'movimentos repetitivos': {
                   fator: 'Movimentos repetitivos',
                   descricao: 'Risco não encontra-se em níveis que possam provocar lesão',
-                  quantidade: 'Não há risco',
+                  quantidade: 'Média (Índice OCRA 4,6 - 9,0)',
                   limite: 'Limite não aplicável',
                   probabilidade: 4,
                   severidade: 3,
@@ -432,6 +492,10 @@ export const listaEmpresas = [
                   monitorar: true,
                   fonte: 'Atividades desempenhadas',
                   danos: 'LER/DORT',
+                  medidas_existentes: 'Nenhuma implementada',
+                  medidas_necessarias: 'Realizar ginásticas laboral',
+                  responsavel_medidas: 'Empregador',
+                  como_medidas: 'Antes do início dos trabalhos e ministrado por profissional habilitado',
                 },
               }
             ]
@@ -474,5 +538,5 @@ export const listaEmpresas = [
       cargo: 'Eng° civil e de segurança do trabalho',
       crea: 'CREA-nº 181682457-7'
     }
-  }
+  },
 ];

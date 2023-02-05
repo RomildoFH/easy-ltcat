@@ -8,6 +8,7 @@ function AppProvider({ children }) {
   const [empresa, setEmpresa] = useState({});
   const [laudo, setLaudo] = useState('pgr');
   const [versaoDoLaudo, setVersaoDoLaudo] = useState('2023.1');
+  const [acoes, setAcoes] = useState([]);
 
   const values = useMemo(() => ({
     isLoading,
@@ -22,7 +23,9 @@ function AppProvider({ children }) {
     setLaudo,
     versaoDoLaudo,
     setVersaoDoLaudo,
-  }), [isLoading, nomeEmpresa, cnpj, empresa, laudo, versaoDoLaudo])
+    acoes,
+    setAcoes,
+  }), [isLoading, nomeEmpresa, cnpj, empresa, laudo, versaoDoLaudo, acoes])
 
   return (
     <AppContext.Provider value={ values }>
