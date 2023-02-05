@@ -14,6 +14,9 @@ function Responsabilidade() {
       <p className="article-paragraph">
         O PGR, é de responsabilidade do empregador, sendo ele o total e único responsável por sua elaboração, implementação e manutenção. Reconhecendo que todo o conteúdo aqui descrito é verídico,o responsável pela { empresa.nome } e também o responsável pela elaboração do documento, assinam abaixo:
       </p>
+      <p>{' '}</p>
+      <p>{ empresa.cidade }, ______/_________/_________</p>
+      <p>{' '}</p>
       <div className="assinaturas-container">
         <div className="campo-assinatura">
           <p>Responsável técnico</p>
