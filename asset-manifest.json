@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/easy-ltcat/static/css/main.e5a982b7.css",
-    "main.js": "/easy-ltcat/static/js/main.c4d27101.js",
+    "main.css": "/easy-ltcat/static/css/main.5a58055a.css",
+    "main.js": "/easy-ltcat/static/js/main.08164e66.js",
     "static/js/787.2704b0a7.chunk.js": "/easy-ltcat/static/js/787.2704b0a7.chunk.js",
     "static/media/matriz_de_prioridade.png": "/easy-ltcat/static/media/matriz_de_prioridade.bc75b6ed6874238aa6fe.png",
     "static/media/leitura-riscos.png": "/easy-ltcat/static/media/leitura-riscos.31ba1b7c5e513c6fdeaa.png",
     "static/media/matriz_de_risco.png": "/easy-ltcat/static/media/matriz_de_risco.9769deab66cdef092d39.png",
     "index.html": "/easy-ltcat/index.html",
-    "main.e5a982b7.css.map": "/easy-ltcat/static/css/main.e5a982b7.css.map",
-    "main.c4d27101.js.map": "/easy-ltcat/static/js/main.c4d27101.js.map",
+    "main.5a58055a.css.map": "/easy-ltcat/static/css/main.5a58055a.css.map",
+    "main.08164e66.js.map": "/easy-ltcat/static/js/main.08164e66.js.map",
     "787.2704b0a7.chunk.js.map": "/easy-ltcat/static/js/787.2704b0a7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5a982b7.css",
-    "static/js/main.c4d27101.js"
+    "static/css/main.5a58055a.css",
+    "static/js/main.08164e66.js"
   ]
 }
