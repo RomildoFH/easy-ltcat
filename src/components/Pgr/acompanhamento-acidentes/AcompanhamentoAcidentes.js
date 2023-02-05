@@ -24,10 +24,10 @@ function AcompanhamentoAcidentes() {
   };
 
   return (
-    <div>
+    <div className="page-print-container">
       <article className="article-container">
       <h3 className="article-title">
-        11. Acompanhamento dos acidentes
+        12. Acompanhamento dos acidentes
       </h3>
       <p className="article-paragraph">
         Todo acidente de trabalho, seja considerado ele típico ou de trajeto, deverá ser registrado na tabela de acompanhamento de acidentes, anualmente deverá ser feita uma avaliação dos registros e caso necessário o plano de ação deverá ser atualizado.
@@ -63,7 +63,7 @@ function AcompanhamentoAcidentes() {
         </thead>
         <tbody>
           {
-            createRows(15)
+            createRows(30)
           }
         </tbody>
       </table>

@@ -23,10 +23,10 @@ function FichaEpi() {
   };
 
   return (
-    <div>
+    <div className="page-print-container">
       <article className="article-container">
       <h3 className="article-title">
-        12. Ficha de Equipamentos de Proteção Individual
+        13. Ficha de Equipamentos de Proteção Individual
       </h3>
       <p className="article-paragraph">
         Todo equipamento de proteção individual, quando for entregue ao colaborador, precisará ser registrado em ficha de EPI, conforme modelo abaixo, porém a empresa poderá optar por utilizar outro modelo que julgar mais adequado, desde que contenha informações suficientes para comprovar a entrega do EPI.
@@ -60,8 +60,6 @@ function FichaEpi() {
           {
             createRows(22)
           }
-        </tbody>
-        <tfoot>
           <tr>
             <td colSpan={5}>
               <ul className="lista-observacoes-ficha">
@@ -80,6 +78,8 @@ function FichaEpi() {
                 
               </td>
             </tr>
+        </tbody>
+        <tfoot>          
         </tfoot>
       </table>
       </article>

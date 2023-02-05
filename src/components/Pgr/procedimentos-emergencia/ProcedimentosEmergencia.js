@@ -3,10 +3,10 @@ import React from 'react';
 function ProcedimentosEmergencia() {
 
   return (
-    <div>
+    <div className="page-print-container">
       <article className="article-container">
       <h3 className="article-title">
-        13. Ficha de Equipamentos de Proteção Individual
+        14. Procedimentos de emergência
       </h3>
       <p className="article-paragraph">
         Em caso de ocorrência de acidentes, a empresa deverá tomar medidas emergenciais para resguardar o bem estar da vítima, sendo necessário muitas vezes adotar medidas de imediato. Na tabela de Procedimentos de Acidentes Críticos, encontram-se algumas recomendações do que se deve ser feito em caso de acidentes. Devendo a empresa, elaborar seu próprio procedmento de emergência, considerando seus recursos disponíveis, pessoal treinado, locais de atendimento médico e outros fatores que venham a influênciar no resgate e assistência a vítima.

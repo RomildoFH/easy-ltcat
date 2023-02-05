@@ -38,4 +38,8 @@ div#root {
   body {
     background-color: white;
   }
+  .page-print-container {
+    margin-top: 100%;
+    margin-bottom: 100%;
+  }
 }

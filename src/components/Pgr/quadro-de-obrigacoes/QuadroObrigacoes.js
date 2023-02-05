@@ -3,7 +3,7 @@ import React from 'react';
 function QuadroObrigacoes() {
   return (
     <article className="article-container">
-        <h3 className="article-title">10. QUADRO DE OBRIGAÇÕES</h3>
+        <h3 className="article-title">11. QUADRO DE OBRIGAÇÕES</h3>
         <p className="article-paragraph">
           Além das ações listadas no plano de ação, a empresa necessita cumprir com obrigações mínimas determinadas pelas normativas de saúde e segurança do trabalho. Para elucidar sobre tais obrigações, a empresa deverá atender as determinações constantes do quadro de obrigações deste documento. Deve-se também considerar que mediante as condições de saúde e segurança do trabalho sofrerem alterações de uma empresa para outra, em momentos distintos de sua operação, deve-se manter o monitoramente constante dos riscos e serem tomadas ações compatíveis com a realidade de cada lugar ou atividade para assegurar a integridade física de seus trabalhadores.
         </p>

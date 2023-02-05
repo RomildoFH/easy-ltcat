@@ -37,33 +37,35 @@ function PlanoDeAcao() {
   }
 
   return (
-    <article className="article-container">
-      <h3 className="article-title">
-        9. PLANO DE AÇÃO
-      </h3>
-        <table className="table-action-plan">
-          <thead>
-            <tr className="text-bold">
-              <td>Cargo Exposto</td>
-              <td>Fator de risco</td>
-              <td>Prioridade</td>
-              <td>Ação</td>
-              <td>Responsável</td>
-              <td>Prazo (dd/mm/aa)</td>
-              <td>Iniciado (dd/mm/aa)</td>
-              <td>Concluído (dd/mm/aa)</td>
-              <td>Assinatura</td>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              getActions()
-            }
-          </tbody>
-        </table>
-        <p className="article-paragraph">Todas as ações necessitam de atualização e avaliação periódica, sendo o empregar o responsável por garantir sua atualização. Os campos de data e assinatura devem ser preenchidos com caneta, sem rasuras.</p>
-        <p className="article-paragraph">Em caso de haver, implementação de EPI's é necessário garantir que além de seu fornecimento, sejam registrados em ficha de EPI e os colaboradores recebam treinamento para seu correto uso.</p>
-    </article>
+    <div className="page-print-container">
+      <article className="article-container">
+        <h3 className="article-title">
+          10. PLANO DE AÇÃO
+        </h3>
+          <table className="table-action-plan">
+            <thead>
+              <tr className="text-bold">
+                <td>Cargo Exposto</td>
+                <td>Fator de risco</td>
+                <td>Prioridade</td>
+                <td>Ação</td>
+                <td>Responsável</td>
+                <td>Prazo (dd/mm/aa)</td>
+                <td>Iniciado (dd/mm/aa)</td>
+                <td>Concluído (dd/mm/aa)</td>
+                <td>Assinatura</td>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                getActions()
+              }
+            </tbody>
+          </table>
+          <p className="article-paragraph">Todas as ações necessitam de atualização e avaliação periódica, sendo o empregar o responsável por garantir sua atualização. Os campos de data e assinatura devem ser preenchidos com caneta, sem rasuras.</p>
+          <p className="article-paragraph">Em caso de haver, implementação de EPI's é necessário garantir que além de seu fornecimento, sejam registrados em ficha de EPI e os colaboradores recebam treinamento para seu correto uso.</p>
+      </article>
+    </div>
   )
 }
 

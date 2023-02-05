@@ -9,7 +9,7 @@ function Responsabilidade() {
     <div>
       <article className="article-container">
       <h3 className="article-title">
-        14. Responsabilidade pelo PGR
+        15. Responsabilidade pelo PGR
       </h3>
       <p className="article-paragraph">
         O PGR, é de responsabilidade do empregador, sendo ele o total e único responsável por sua elaboração, implementação e manutenção. Reconhecendo que todo o conteúdo aqui descrito é verídico,o responsável pela { empresa.nome } e também o responsável pela elaboração do documento, assinam abaixo:
@@ -33,6 +33,6 @@ function Responsabilidade() {
       </article>
     </div>
   )
-}
+};
 
 export default Responsabilidade;
