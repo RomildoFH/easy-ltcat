@@ -30,7 +30,7 @@ function RiskAssesment() {
                     </tr>
                     <tr>
                       <td colSpan="2">{cargo.nome}</td>
-                      <td>Administrativo</td>
+                      <td>{cargo.setor}</td>
                       <td colSpan="2">{fatorDeRisco.jornada}</td>
                     </tr>
                     <tr className="text-bold">

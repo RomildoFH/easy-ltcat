@@ -137,6 +137,7 @@ export const listaEmpresas = [
     cargos: [
       {
         nome: 'Auxiliar administrativo',
+        setor: 'Administrativo',
         masc: 0,
         fem: 1,
         menores: 0,
@@ -323,6 +324,7 @@ export const listaEmpresas = [
       },
       {
         nome: 'Padeiro',
+        setor: 'Produção',
         masc: 1,
         fem: 0,
         menores: 0,
@@ -553,13 +555,14 @@ export const listaEmpresas = [
     cnaes: ['47.12-1-00 - Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns', '47.21-1-02 - Padaria e confeitaria com predominância de revenda', '47.29-6-99 - Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente'],
     grau_de_risco: '2',
     funcionarios: 2,
-    contato: { nome: 'JORGE', telefone: '(87) 9619-1053 / (87) 9973-0025'},
+    contato: { nome: 'Magna Mirian Chaves Santos', telefone: '(87) 9619-1053 / (87) 9973-0025'},
     medicoes: ['pressão sonora', 'exposição ao calor', 'agentes químicos', 'biológicos'],
     escopo_pericia: ['Análise das tarefas executadas', 'Quantificação dos agentes', 'Análise das normas de segurança do trabalho', 'Análise dos sistemas de proteção individual adotados', 'Consulta as normas técnicas'],
     descricao_do_local: 'A empresa divide-se em dois ambientes, sendo eles a área de vendas de mercadorias e a área de fabricação. Todos os ambientes contam com paredes construídas em alvenaria de tijolos, piso cerâmico na cor branca, o teto é composto por laje. No pavimento superior encontra-se uma residência independente do funcionamento da empresa.',
     cargos: [
       {
         nome: 'Forneiro',
+        setor: 'Produção',
         masc: 1,
         fem: 0,
         menores: 0,
@@ -746,6 +749,7 @@ export const listaEmpresas = [
       },
       {
         nome: 'Padeiro',
+        setor: 'Produção',
         masc: 1,
         fem: 0,
         menores: 0,
@@ -934,6 +938,7 @@ export const listaEmpresas = [
       },
       {
         nome: 'Caixa',
+        setor: 'Loja',
         masc: 1,
         fem: 0,
         menores: 0,
@@ -1141,9 +1146,9 @@ export const listaEmpresas = [
     cidade: 'Garanhuns - PE',
     data_conclusao: '15 de Janeiro de 2023',
     responsavel_empresa: {
-      nome: 'Jorge',
-      cargo: 'Proprietário',
-      cpf: '100.100.100-00'
+      nome: 'Magna Mirian Chaves Santos',
+      cargo: 'Proprietário(a)',
+      cpf: '749.236.504-78'
     },
     responsavel_tecnico: {
       nome: 'Romildo Pereira da Silva Filho',

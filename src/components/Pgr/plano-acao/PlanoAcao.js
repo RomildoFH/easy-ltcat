@@ -14,7 +14,7 @@ function PlanoDeAcao() {
         const riscos = Object.keys(agente[agenteNocivo][0]);
         return riscos.map((risco) => {
           const riskObject = agente[agenteNocivo][0][risco];
-          console.log(riskObject);
+          // console.log(riskObject);
           if (riskObject.monitorar === true) {
             return (
               <tr key={`${cargo}-${risco}`}>

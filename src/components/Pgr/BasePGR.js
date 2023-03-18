@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AppContext from "../../context/AppContext";
 import QuadroFuniocnal from "./QuadroFuniocnal";
+import calcNumFuncionarios from "../utils/calcNumFuncionarios";
 
 const matrizRisco = require("../Pgr/matriz_de_risco.png");
 const matrizPriorizacao = require("../Pgr/matriz_de_prioridade.png");
@@ -8,6 +9,7 @@ const leituraRisco = require("../Pgr/leitura-riscos.png");
 
 function BasePGR() {
   const { empresa } = useContext(AppContext);
+  const objFuncionarios = calcNumFuncionarios(empresa.nome);
   return (
     <section className="introducao">
       <article className="article-container">
@@ -29,6 +31,12 @@ function BasePGR() {
                 <strong>Razão Social:</strong>
               </td>
               <td>{empresa.nome}</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>CNPJ:</strong>
+              </td>
+              <td>{empresa.cnpj}</td>
             </tr>
             <tr>
               <td>
@@ -62,7 +70,20 @@ function BasePGR() {
               <td>
                 <strong>Número de funcionários:</strong>
               </td>
-              <td>{empresa.funcionarios}</td>
+              <td>
+                <tr>
+                  {`Masculinos: ${objFuncionarios.masculino}`}
+                </tr>
+                <tr>
+                  {`Femininos: ${objFuncionarios.feminino}`}
+                </tr>
+                <tr>
+                  {`Menores: ${objFuncionarios.menor}`}
+                </tr>
+                <tr>
+                  {`Total: ${objFuncionarios.masculino + objFuncionarios.feminino + objFuncionarios.menor} `}
+                </tr>
+              </td>
             </tr>
             <tr>
               <td>
@@ -760,8 +781,7 @@ function BasePGR() {
           aumentada nas reincidências, aplicada e cobrada na forma do artigo 109
           do Decreto no 2.173/97.
           <br />
-          j) Deverão ser comunicadas ao INSS, mediante formulário "Comunicação
-          de Acidente do Trabalho — CAT", as seguintes ocorrências:
+          j) Deverão ser comunicadas ao INSS, mediante preenchimento de Comunicado de Acidente de Trabalho - CAT, no sistema do e-social, as seguintes ocorrências: acidente do trabalho típico, acidente do trabalho de trajeto.
           <br />
           k) Todos os casos com diagnóstico formado de doença profissional ou do
           trabalho devem ser objeto de emissão de CAT pelo empregador,
